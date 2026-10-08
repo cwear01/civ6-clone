@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Civ VI Prototype</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <h1>Civ VI Prototype</h1>
+        <div class="stats-box">
+          <div><span>Turn</span> <strong id="turnValue">1</strong></div>
+          <div><span>Your cities</span> <strong id="playerCitiesValue">0</strong></div>
+          <div><span>Enemy cities</span> <strong id="aiCitiesValue">0</strong></div>
+        </div>
+
+        <div class="controls">
+          <button id="endTurnBtn">End Turn</button>
+          <button id="buildSettlerBtn">Build Settler</button>
+          <button id="buildWarriorBtn">Build Warrior</button>
+          <button id="buildWorkerBtn">Build Worker</button>
+          <button id="foundCityBtn">Found City</button>
+          <button id="resetBtn" class="secondary">Reset Match</button>
+        </div>
+
+        <div class="info-panel">
+          <h2>Selected</h2>
+          <div id="selectionInfo">No selection</div>
+        </div>
+
+        <div class="info-panel">
+          <h2>Events</h2>
+          <ul id="eventLog"></ul>
+        </div>
+      </aside>
+
+      <main class="board-wrap">
+        <canvas id="gameCanvas" width="820" height="640"></canvas>
+      </main>
+    </div>
+
+    <script src="game.js"></script>
+  </body>
+</html>
